@@ -1,6 +1,26 @@
 // Import styles
 import './style.css';
 
+// Global Google Ads Conversion Helper Function
+window.gtag_report_conversion = function(url) {
+  var callback = function () {
+    if (typeof(url) !== 'undefined' && url) {
+      window.location = url;
+    }
+  };
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'conversion', {
+      'send_to': 'AW-18381037285/XHy6COXz_eAcEOW94bxE',
+      'value': 1.0,
+      'currency': 'THB',
+      'event_callback': callback
+    });
+  } else if (url) {
+    window.location = url;
+  }
+  return false;
+};
+
 // Google Ads Conversion Tracking & Google Reviews Logic
 document.addEventListener('DOMContentLoaded', () => {
   console.log('SAN GAYA Massage Landing Page Loaded');
@@ -8,11 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Track Phone Calls
   const telLinks = document.querySelectorAll('a[href^="tel:"]');
   telLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
       console.log('Phone Call Initiated');
+      const href = link.getAttribute('href');
       if (typeof window.gtag === 'function') {
         window.gtag('event', 'conversion', {
-          'send_to': 'AW-18381037285/call_conversion',
+          'send_to': 'AW-18381037285/XHy6COXz_eAcEOW94bxE',
           'value': 1.0,
           'currency': 'THB'
         });
@@ -23,11 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Track LINE Add Friends / Booking
   const lineLinks = document.querySelectorAll('a[href*="line.me"]');
   lineLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
       console.log('LINE Contact Initiated');
       if (typeof window.gtag === 'function') {
         window.gtag('event', 'conversion', {
-          'send_to': 'AW-18381037285/line_conversion',
+          'send_to': 'AW-18381037285/XHy6COXz_eAcEOW94bxE',
           'value': 1.0,
           'currency': 'THB'
         });
