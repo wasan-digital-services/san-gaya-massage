@@ -55,6 +55,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Track Google Maps Navigation
+  const mapLinks = document.querySelectorAll('a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]');
+  mapLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      console.log('Google Maps Navigation Initiated');
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          'send_to': 'AW-18381037285/XHy6COXz_eAcEOW94bxE',
+          'value': 1.0,
+          'currency': 'THB'
+        });
+      }
+    });
+  });
+
+  // Track Facebook Page Visits
+  const fbLinks = document.querySelectorAll('a[href*="facebook.com"]');
+  fbLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      console.log('Facebook Page Initiated');
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          'send_to': 'AW-18381037285/XHy6COXz_eAcEOW94bxE',
+          'value': 1.0,
+          'currency': 'THB'
+        });
+      }
+    });
+  });
 });
 
 // Dynamic Google Places API Fetcher Helper (Option to dynamic load Google Maps Reviews)

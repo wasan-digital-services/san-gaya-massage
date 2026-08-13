@@ -364,7 +364,7 @@ img {
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, rgba(28, 56, 43, 0.92) 0%, rgba(28, 56, 43, 0.78) 50%, rgba(19, 38, 29, 0.94) 100%),
-              url('/images/hero.jpg') center/cover no-repeat;
+              url('/images/interior_sneak_peek.jpg') center/cover no-repeat;
   z-index: 1;
 }
 
