@@ -59,6 +59,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
   font-size: 16px;
   -webkit-tap-highlight-color: transparent;
 }
@@ -296,6 +297,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .brand-logo {
@@ -327,20 +330,40 @@ img {
   color: var(--text-light);
 }
 
-.nav-contact-badge {
+.nav-links {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.15);
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 24px;
   border-radius: var(--radius-full);
-  color: var(--text-light);
-  font-size: 0.9rem;
-  font-weight: 500;
 }
 
+.nav-links a {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.nav-links a:hover {
+  color: var(--gold-accent);
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    justify-content: center;
+  }
+  .nav-links {
+    gap: 15px;
+    padding: 8px 16px;
+  }
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+}
 /* ==========================================================================
    1. HERO SECTION
    ========================================================================== */

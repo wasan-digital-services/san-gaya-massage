@@ -25,6 +25,16 @@ window.gtag_report_conversion = function(url) {
 document.addEventListener('DOMContentLoaded', () => {
   console.log('SAN GAYA Massage Landing Page Loaded');
 
+  // Handle URL hash on initial load to ensure it scrolls correctly with fixed navbar
+  if (window.location.hash) {
+    setTimeout(() => {
+      const targetElement = document.querySelector(window.location.hash);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 150);
+  }
+
   // Track Phone Calls
   const telLinks = document.querySelectorAll('a[href^="tel:"]');
   telLinks.forEach(link => {
