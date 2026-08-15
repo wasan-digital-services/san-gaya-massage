@@ -1,6 +1,9 @@
 // Import styles
 import './style.css';
 
+// Import i18n
+import { initI18n, setLang } from './i18n.js';
+
 // Global Google Ads Conversion Helper Function
 window.gtag_report_conversion = function(url) {
   var callback = function () {
@@ -21,11 +24,22 @@ window.gtag_report_conversion = function(url) {
   return false;
 };
 
-// Google Ads Conversion Tracking & Google Reviews Logic
+// Main init
 document.addEventListener('DOMContentLoaded', () => {
   console.log('SAN GAYA Massage Landing Page Loaded');
 
-  // Handle URL hash on initial load to ensure it scrolls correctly with fixed navbar
+  // --- 1. Initialize i18n (reads localStorage, applies translations) ---
+  initI18n();
+
+  // --- 2. Language Switcher Button Listeners ---
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      setLang(lang);
+    });
+  });
+
+  // --- 3. Handle URL hash on initial load ---
   if (window.location.hash) {
     setTimeout(() => {
       const targetElement = document.querySelector(window.location.hash);
@@ -35,12 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 150);
   }
 
+  // --- 4. Google Ads Conversion Tracking ---
+
   // Track Phone Calls
   const telLinks = document.querySelectorAll('a[href^="tel:"]');
   telLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', () => {
       console.log('Phone Call Initiated');
-      const href = link.getAttribute('href');
       if (typeof window.gtag === 'function') {
         window.gtag('event', 'conversion', {
           'send_to': 'AW-18381037285/XHy6COXz_eAcEOW94bxE',
@@ -54,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Track LINE Add Friends / Booking
   const lineLinks = document.querySelectorAll('a[href*="line.me"]');
   lineLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', () => {
       console.log('LINE Contact Initiated');
       if (typeof window.gtag === 'function') {
         window.gtag('event', 'conversion', {
@@ -69,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Track Google Maps Navigation
   const mapLinks = document.querySelectorAll('a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]');
   mapLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', () => {
       console.log('Google Maps Navigation Initiated');
       if (typeof window.gtag === 'function') {
         window.gtag('event', 'conversion', {
@@ -84,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Track Facebook Page Visits
   const fbLinks = document.querySelectorAll('a[href*="facebook.com"]');
   fbLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', () => {
       console.log('Facebook Page Initiated');
       if (typeof window.gtag === 'function') {
         window.gtag('event', 'conversion', {
@@ -100,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Dynamic Google Places API Fetcher Helper (Option to dynamic load Google Maps Reviews)
 window.fetchGoogleReviews = function(placeId, googleApiKey) {
   if (!googleApiKey || !placeId) return;
-  
+
   const script = document.createElement('script');
   script.src = `https://maps.googleapis.com/maps/api/js?key=${googleApiKey}&libraries=places&callback=initGooglePlacesReviews`;
   script.async = true;
@@ -109,7 +124,7 @@ window.fetchGoogleReviews = function(placeId, googleApiKey) {
   window.initGooglePlacesReviews = function() {
     const dummyDiv = document.createElement('div');
     const service = new google.maps.places.PlacesService(dummyDiv);
-    
+
     service.getDetails({ placeId: placeId, fields: ['name', 'rating', 'user_ratings_total', 'reviews'] }, (place, status) => {
       if (status === google.maps.places.PlacesServiceStatus.OK && place.reviews) {
         renderDynamicReviews(place.reviews);
@@ -140,7 +155,7 @@ function renderDynamicReviews(reviews) {
         <div class="review-stars">${'★'.repeat(r.rating || 5)}</div>
         <p class="review-text">"${r.text}"</p>
       </div>
-      <div class="review-time">Google Review • ${r.relative_time_description || 'ล่าสุด'}</div>
+      <div class="review-time">Google Review • ${r.relative_time_description || 'Recently'}</div>
     </div>
   `).join('');
 }

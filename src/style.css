@@ -33,7 +33,7 @@
 
   /* Typography */
   --font-heading: 'Prompt', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Sarabun', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Sarabun', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Elevation */
   --shadow-sm: 0 2px 8px rgba(78, 90, 35, 0.05);
@@ -301,6 +301,52 @@ img {
   gap: 15px;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* Language Switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px;
+  border-radius: var(--radius-full);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.lang-btn:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lang-btn--active {
+  background: var(--gold-accent);
+  color: var(--primary-green) !important;
+  box-shadow: 0 2px 8px rgba(212, 166, 107, 0.4);
+}
+
 .brand-logo {
   display: flex;
   align-items: center;
@@ -345,23 +391,31 @@ img {
   color: var(--text-light);
   font-size: 0.95rem;
   font-weight: 500;
-  transition: all var(--transition-fast);
+  transition: all 0.2s ease;
 }
 
 .nav-links a:hover {
   color: var(--gold-accent);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .nav-container {
     justify-content: center;
   }
+  .nav-right {
+    justify-content: center;
+    gap: 10px;
+  }
   .nav-links {
-    gap: 15px;
-    padding: 8px 16px;
+    gap: 12px;
+    padding: 7px 14px;
   }
   .nav-links a {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
+  }
+  .lang-btn {
+    font-size: 0.75rem;
+    padding: 4px 10px;
   }
 }
 /* ==========================================================================
@@ -591,6 +645,24 @@ img {
   border: 1px solid var(--gold-accent);
 }
 
+.service-popular-badge--gold {
+  background-color: var(--gold-accent);
+  color: var(--primary-green);
+  border-color: var(--warm-brown);
+}
+
+/* Featured service card (Office Syndrome) */
+.service-card--featured {
+  border-color: var(--gold-accent);
+  box-shadow: 0 4px 20px rgba(212, 166, 107, 0.15);
+}
+
+/* Bamboo card special styling */
+.service-card--bamboo {
+  background: linear-gradient(160deg, var(--bg-main) 0%, #f0ead8 100%);
+  border-color: var(--warm-brown);
+}
+
 .service-body {
   padding: 24px;
   display: flex;
@@ -611,43 +683,26 @@ img {
   flex-grow: 1;
 }
 
-.service-pricing-table {
-  background-color: var(--bg-card);
-  border-radius: var(--radius-sm);
-  padding: 12px 16px;
-  margin-bottom: 20px;
-  border: 1px solid var(--border-subtle);
-}
-
-.price-row {
+/* Service CTA group — Call + LINE buttons side by side */
+.service-cta-group {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 0;
-  font-size: 0.95rem;
+  gap: 8px;
+  margin-top: auto;
 }
 
-.price-row:not(:last-child) {
-  border-bottom: 1px stroke var(--border-subtle);
-  border-bottom: 1px dashed rgba(139, 107, 77, 0.2);
+.service-btn-half {
+  flex: 1;
+  padding: 10px 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  gap: 5px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  min-width: 0;
 }
 
-.duration-tag {
-  color: var(--text-dark);
-  font-weight: 500;
-}
-
-.price-tag {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--warm-brown);
-  font-size: 1.05rem;
-}
-
-.service-btn {
-  width: 100%;
-  padding: 12px;
-  font-size: 0.95rem;
+.service-btn-half svg {
+  flex-shrink: 0;
 }
 
 /* ==========================================================================

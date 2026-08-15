@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- SEO Meta Tags -->
-  <title>SAN GAYA Massage - ร้านนวดเพื่อสุขภาพ นวดไทย ออฟฟิศซินโดรม อโรมา</title>
-  <meta name="description" content="SAN GAYA Massage บริการนวดเพื่อสุขภาพ นวดไทยโบราณ นวดออฟฟิศซินโดรม นวดอโรมา ผ้าปูเปลี่ยนทุกเคส หมอนวดมีใบรับรอง บรรยากาศสงบ สะอาด เปิด 13.00-21.00 น. มีที่จอดรถ">
-  <meta name="keywords" content="ร้านนวด, นวดไทย, นวดออฟฟิศซินโดรม, นวดอโรมา, นวดเท้า, SAN GAYA Massage, ร้านนวดใกล้ฉัน, จองนวด">
-  
+  <title>SAN GAYA Massage – Traditional Thai, Office Syndrome & Aroma Massage | Chiang Mai</title>
+  <meta name="description" content="SAN GAYA Massage offers Traditional Thai Massage, Office Syndrome Massage, Foot Massage, Aroma Massage & Bamboo Signature Massage in San Sai, Chiang Mai. DHSS-certified therapists, fresh linen every session. Book by call or LINE.">
+  <meta name="keywords" content="Thai massage, Office Syndrome Massage, Aroma Massage, Foot Massage, Bamboo Massage, SAN GAYA Massage, Chiang Mai massage, San Sai massage, นวดไทย, นวดออฟฟิศซินโดรม">
+
   <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="SAN GAYA Massage - ร้านนวดเพื่อสุขภาพ ผ่อนคลายระดับพรีเมียม">
-  <meta property="og:description" content="นวดไทย ออฟฟิศซินโดรม นวดอโรมา ผ้าปูสะอาดเปลี่ยนทุกเคส 100% หมอนวดมีใบรับรอง เปิด 13.00 - 21.00 น.">
+  <meta property="og:title" content="SAN GAYA Massage – Premium Health Massage in Chiang Mai">
+  <meta property="og:description" content="Traditional Thai, Office Syndrome, Aroma & Bamboo Signature Massage. DHSS-certified therapists. Fresh linen every session. Book by call or LINE.">
   <meta property="og:image" content="/images/interior_sneak_peek.jpg">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts: Prompt (Headings) & Sarabun (Body) -->
+  <!-- Google Fonts: Prompt + Sarabun + Noto Sans SC (Chinese) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <!-- Google Ads Conversion Tracking Script (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18381037285"></script>
@@ -26,7 +26,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-18381037285');
   </script>
 </head>
@@ -38,12 +37,20 @@
       <a href="#" class="brand-logo">
         <img src="/images/logo.png" alt="SAN GAYA HEALTH MASSAGE" class="brand-logo-img">
       </a>
-      <nav class="nav-links">
-        <a href="#services">บริการนวด</a>
-        <a href="#highlights">จุดเด่นร้าน</a>
-        <a href="#reviews">รีวิว</a>
-        <a href="#location">แผนที่</a>
-      </nav>
+      <div class="nav-right">
+        <nav class="nav-links">
+          <a href="#services" data-i18n="nav_services">Services</a>
+          <a href="#highlights" data-i18n="nav_highlights">Why Us</a>
+          <a href="#reviews" data-i18n="nav_reviews">Reviews</a>
+          <a href="#location" data-i18n="nav_location">Location</a>
+        </nav>
+        <!-- Language Switcher -->
+        <div class="lang-switcher" role="group" aria-label="Language switcher">
+          <button class="lang-btn lang-btn--active" data-lang="en" id="lang-en" aria-label="English">EN</button>
+          <button class="lang-btn" data-lang="th" id="lang-th" aria-label="ภาษาไทย">ไทย</button>
+          <button class="lang-btn" data-lang="zh" id="lang-zh" aria-label="中文">中文</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -55,35 +62,35 @@
         <img src="/images/logo.png" alt="SAN GAYA HEALTH MASSAGE Logo" class="hero-logo-img">
       </div>
       <div class="hero-badge">
-        <span>✨ สัมผัสประสบการณ์นวดผ่อนคลายระดับพรีเมียม</span>
+        <span data-i18n="hero_badge">✨ Experience Premium Relaxation</span>
       </div>
       <h1 class="hero-title">
-        SAN GAYA Massage
-        <span>ฟื้นฟูร่างกาย คลายความเมื่อยล้า</span>
+        <span class="hero-title-main" data-i18n="hero_title_main">SAN GAYA Massage</span>
+        <span class="hero-title-sub" data-i18n="hero_title_sub">Revive Your Body. Melt the Stress Away.</span>
       </h1>
-      <p class="hero-description">
-        บริการนวดเพื่อสุขภาพ นวดไทยโบราณ นวดออฟฟิศซินโดรม และนวดอโรมา โดยเทราพีสผู้เชี่ยวชาญมีใบรับรองมาตรฐาน สบส. บรรยากาศเงียบสงบ สะอาด เป็นส่วนตัว
+      <p class="hero-description" data-i18n="hero_desc">
+        Professional health massage services — Traditional Thai, Office Syndrome, Aroma & more — by certified therapists with DHSS standard. A clean, serene, and private sanctuary.
       </p>
 
       <div class="hero-actions">
-        <a href="tel:0926096923" class="btn btn-primary" data-conversion-type="call">
+        <a href="tel:0926096923" class="btn btn-primary" id="hero-call-btn" data-conversion-type="call">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          โทรจองคิว: 092-609-6923
+          <span data-i18n="hero_btn_call">Call to Book: 092-609-6923</span>
         </a>
-        <a href="https://line.me/ti/p/~@sangayamassage" target="_blank" rel="noopener" class="btn btn-line" data-conversion-type="line">
+        <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line" id="hero-line-btn" data-conversion-type="line">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
-          แอด LINE จองคิวด่วน
+          <span data-i18n="hero_btn_line">Book via LINE</span>
         </a>
       </div>
 
       <div class="hero-guarantee-pills">
         <div class="guarantee-item">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span>ผ้าปูสะอาดซักอบฆ่าเชื้อเปลี่ยนทุกเคส 100%</span>
+          <span data-i18n="hero_pill1">Fresh linen changed every session — 100%</span>
         </div>
         <div class="guarantee-item">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span>มีที่จอดรถสะดวกหน้าร้าน</span>
+          <span data-i18n="hero_pill2">Convenient free parking on-site</span>
         </div>
       </div>
     </div>
@@ -93,9 +100,9 @@
   <section class="highlights-section section-padding" id="highlights">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">ทำไมต้องเลือกเรา</span>
-        <h2 class="section-title">4 จุดเด่นที่ SAN GAYA ให้ความสำคัญที่สุด</h2>
-        <p class="section-description">เรามุ่งมั่นมอบมาตรฐานการบริการที่ดีที่สุด เพื่อความผ่อนคลายและความสบายใจสูงสุดของคุณ</p>
+        <span class="section-subtitle" data-i18n="highlights_subtitle">Why Choose Us</span>
+        <h2 class="section-title" data-i18n="highlights_title">4 Reasons SAN GAYA Stands Out</h2>
+        <p class="section-description" data-i18n="highlights_desc">We are committed to delivering the highest service standards for your ultimate relaxation and peace of mind.</p>
       </div>
 
       <div class="highlights-grid">
@@ -104,8 +111,8 @@
           <div class="highlight-icon-wrapper">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           </div>
-          <h3>ผ้าปูสะอาดเปลี่ยนทุกเคส</h3>
-          <p>ใส่ใจสุขอนามัยสูงสุด ผ้าปู ปลอกหมอน และผ้าเช็ดตัวผ่านการซักอบฆ่าเชื้อมาตรฐานโรงแรม เปลี่ยนชุดใหม่ทุกเคส 100%</p>
+          <h3 data-i18n="highlight1_title">Fresh Linen Every Session</h3>
+          <p data-i18n="highlight1_desc">We prioritize hygiene above all. Bed sheets, pillow covers, and towels are hotel-standard washed and sanitized fresh for every single client.</p>
         </div>
 
         <!-- Highlight 2 -->
@@ -113,17 +120,17 @@
           <div class="highlight-icon-wrapper">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           </div>
-          <h3>หมอนวดมีใบรับรอง สบส.</h3>
-          <p>เทราพีสทุกคนผ่านการฝึกอบรม ขึ้นทะเบียนผู้ให้บริการนวดเพื่อสุขภาพจากกรมสนับสนุนบริการสุขภาพ (สบส.) สบายใจ นวดตรงจุด</p>
+          <h3 data-i18n="highlight2_title">DHSS-Certified Therapists</h3>
+          <p data-i18n="highlight2_desc">Every therapist is trained and registered with the Department of Health Service Support (DHSS). Skilled hands, trusted techniques.</p>
         </div>
 
         <!-- Highlight 3 -->
         <div class="highlight-card">
           <div class="highlight-icon-wrapper">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
           </div>
-          <h3>บรรยากาศส่วนตัว เงียบสงบ</h3>
-          <p>ออกแบบพื้นที่ให้โปร่ง สะอาด ปราศจากเสียงรบกวน พร้อมกลิ่นหอมอโรมาธรรมชาติเบาๆ ช่วยให้ร่างกายและสมองผ่อนคลายเต็มที่</p>
+          <h3 data-i18n="highlight3_title">Private &amp; Tranquil Atmosphere</h3>
+          <p data-i18n="highlight3_desc">Our space is thoughtfully designed — open, clean, and free from noise. Subtle natural aromas help your body and mind fully unwind.</p>
         </div>
 
         <!-- Highlight 4 -->
@@ -131,137 +138,127 @@
           <div class="highlight-icon-wrapper">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
           </div>
-          <h3>มีที่จอดรถสะดวกสบาย</h3>
-          <p>หมดกังวลเรื่องวนหาที่จอดรถ ร้านมีพื้นที่จอดรถกว้างขวาง ปลอดภัย ปักหมุดเดินทางมาได้ง่ายดาย</p>
+          <h3 data-i18n="highlight4_title">Free Parking Available</h3>
+          <p data-i18n="highlight4_desc">No stress finding parking. We have spacious, safe parking right in front — just follow the pin and you're here.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. SERVICES & PRICING MENU -->
+  <!-- 3. SERVICES SECTION (No Prices) -->
   <section class="services-section section-padding" id="services">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">บริการและอัตราค่าบริการ</span>
-        <h2 class="section-title">เมนูนวดเพื่อสุขภาพ SAN GAYA</h2>
-        <p class="section-description">คัดสรรโปรแกรมนวดที่ตอบโจทย์ความเมื่อยล้า ครบครันทั้งนวดไทย ออฟฟิศซินโดรม อโรมา และนวดเท้า</p>
+        <span class="section-subtitle" data-i18n="services_subtitle">Our Signature Services</span>
+        <h2 class="section-title" data-i18n="services_title">SAN GAYA Massage Menu</h2>
+        <p class="section-description" data-i18n="services_desc">Curated massage programs to target your needs — Thai, Office Syndrome, Aroma, Foot, and our exclusive Bamboo Signature.</p>
       </div>
 
       <div class="services-grid">
-        <!-- Service 1: นวดไทยโบราณ -->
+        <!-- Service 1: Thai Massage -->
         <div class="service-card">
           <div class="service-image-container">
-            <img src="/images/royal_thai_massage.jpg" alt="นวดไทยโบราณ SAN GAYA Massage" loading="lazy">
+            <img src="/images/royal_thai_massage.jpg" alt="Traditional Thai Massage SAN GAYA" loading="lazy">
           </div>
           <div class="service-body">
-            <h3 class="service-title">นวดไทยโบราณ</h3>
-            <p class="service-desc">กดจุด ยืดดัด คลายเส้นตึงทั่วร่างกาย ลดอาการยึดเกร็ง คลายความอ่อนล้า ให้ร่างกายกลับมากระปรี้กระเปร่า</p>
-            
-            <div class="service-pricing-table">
-              <div class="price-row">
-                <span class="duration-tag">⏱️ 60 นาที</span>
-                <span class="price-tag">350 ฿</span>
-              </div>
-              <div class="price-row">
-                <span class="duration-tag">⏱️ 90 นาที</span>
-                <span class="price-tag">500 ฿</span>
-              </div>
-              <div class="price-row">
-                <span class="duration-tag">⏱️ 120 นาที</span>
-                <span class="price-tag">650 ฿</span>
-              </div>
+            <h3 class="service-title" data-i18n="service1_title">Thai Massage</h3>
+            <p class="service-desc" data-i18n="service1_desc">Acupressure, stretching, and deep muscle release across the whole body. Reduces tension and stiffness, leaving you refreshed and energized.</p>
+            <div class="service-cta-group">
+              <a href="tel:0926096923" class="btn btn-outline service-btn-half" id="s1-call-btn" data-conversion-type="call">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span data-i18n="service_btn_call">📞 Call for Pricing</span>
+              </a>
+              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line service-btn-half" id="s1-line-btn" data-conversion-type="line">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+                <span data-i18n="service_btn_line">💬 Enquire on LINE</span>
+              </a>
             </div>
-
-            <a href="https://line.me/ti/p/~@sangayamassage" class="btn btn-outline service-btn" data-conversion-type="line">
-              จองคิวรายการนี้
-            </a>
           </div>
         </div>
 
-        <!-- Service 2: นวดออฟฟิศซินโดรม -->
-        <div class="service-card">
+        <!-- Service 2: Office Syndrome Massage (Popular) -->
+        <div class="service-card service-card--featured">
           <div class="service-image-container">
-            <img src="/images/sports_massage_promo.jpg" alt="นวดออฟฟิศซินโดรม SAN GAYA Massage" loading="lazy">
-            <span class="service-popular-badge">🔥 ยอดนิยม</span>
+            <img src="/images/sports_massage_promo.jpg" alt="Office Syndrome Massage SAN GAYA" loading="lazy">
+            <span class="service-popular-badge" data-i18n="service2_badge">🔥 Most Popular</span>
           </div>
           <div class="service-body">
-            <h3 class="service-title">นวดออฟฟิศซินโดรม</h3>
-            <p class="service-desc">เน้นย้ำพิเศษบริเวณ คอ บ่า ไหล่ และสะบัก เหมาะสำหรับผู้ที่ทำงานนั่งหน้าคอมนานๆ หรือปวดสะบักจม</p>
-            
-            <div class="service-pricing-table">
-              <div class="price-row">
-                <span class="duration-tag">⏱️ 60 นาที</span>
-                <span class="price-tag">450 ฿</span>
-              </div>
-              <div class="price-row">
-                <span class="duration-tag">⏱️ 90 นาที</span>
-                <span class="price-tag">650 ฿</span>
-              </div>
-              <div class="price-row">
-                <span class="duration-tag">⏱️ 120 นาที</span>
-                <span class="price-tag">850 ฿</span>
-              </div>
+            <h3 class="service-title" data-i18n="service2_title">Office Syndrome Massage</h3>
+            <p class="service-desc" data-i18n="service2_desc">Targeted deep-tissue work on neck, shoulders, upper back, and shoulder blades — ideal for those who sit at a computer for long hours.</p>
+            <div class="service-cta-group">
+              <a href="tel:0926096923" class="btn btn-primary service-btn-half" id="s2-call-btn" data-conversion-type="call">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span data-i18n="service_btn_call">📞 Call for Pricing</span>
+              </a>
+              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line service-btn-half" id="s2-line-btn" data-conversion-type="line">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+                <span data-i18n="service_btn_line">💬 Enquire on LINE</span>
+              </a>
             </div>
-
-            <a href="https://line.me/ti/p/~@sangayamassage" class="btn btn-primary service-btn" data-conversion-type="line">
-              จองคิวรายการนี้
-            </a>
           </div>
         </div>
 
-        <!-- Service 3: นวดออยล์ / อโรมา -->
+        <!-- Service 3: Foot Massage -->
         <div class="service-card">
           <div class="service-image-container">
-            <img src="/images/aroma_massage_service.jpg" alt="นวดออยล์ อโรมาบำบัด SAN GAYA Massage" loading="lazy">
+            <img src="/images/foot_massage_service.jpg" alt="Foot Massage & Reflexology SAN GAYA" loading="lazy">
           </div>
           <div class="service-body">
-            <h3 class="service-title">นวดออยล์ / อโรมาบำบัด</h3>
-            <p class="service-desc">นวดรีดเส้นอย่างนุ่มนวลด้วยน้ำมันหอมระเหยออร์แกนิค บำรุงผิวให้ชุ่มชื้น ลดความเครียด ช่วยให้หลับสบายยิ่งขึ้น</p>
-            
-            <div class="service-pricing-table">
-              <div class="price-row">
-                <span class="duration-tag">⏱️ 60 นาที</span>
-                <span class="price-tag">550 ฿</span>
-              </div>
-              <div class="price-row">
-                <span class="duration-tag">⏱️ 90 นาที</span>
-                <span class="price-tag">750 ฿</span>
-              </div>
-              <div class="price-row">
-                <span class="duration-tag">⏱️ 120 นาที</span>
-                <span class="price-tag">950 ฿</span>
-              </div>
+            <h3 class="service-title" data-i18n="service3_title">Foot Massage</h3>
+            <p class="service-desc" data-i18n="service3_desc">Warm herbal foot soak followed by leg muscle relief and reflexology pressure points. Stimulates blood circulation and melts away fatigue.</p>
+            <div class="service-cta-group">
+              <a href="tel:0926096923" class="btn btn-outline service-btn-half" id="s3-call-btn" data-conversion-type="call">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span data-i18n="service_btn_call">📞 Call for Pricing</span>
+              </a>
+              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line service-btn-half" id="s3-line-btn" data-conversion-type="line">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+                <span data-i18n="service_btn_line">💬 Enquire on LINE</span>
+              </a>
             </div>
-
-            <a href="https://line.me/ti/p/~@sangayamassage" class="btn btn-outline service-btn" data-conversion-type="line">
-              จองคิวรายการนี้
-            </a>
           </div>
         </div>
 
-        <!-- Service 4: นวดเท้ากดจุด -->
+        <!-- Service 4: Aroma Massage -->
         <div class="service-card">
           <div class="service-image-container">
-            <img src="/images/foot_massage_service.jpg" alt="นวดเท้าและกดจุด SAN GAYA Massage" loading="lazy">
+            <img src="/images/aroma_massage_service.jpg" alt="Aroma Oil Massage SAN GAYA" loading="lazy">
           </div>
           <div class="service-body">
-            <h3 class="service-title">นวดเท้า & กดจุดสะท้อน</h3>
-            <p class="service-desc">แช่เท้าด้วยน้ำอุ่นสมุนไพร นวดคลายกล้ามเนื้อขาและกดจุดสะท้อนใต้ฝ่าเท้า กระตุ้นการไหลเวียนโลหิต</p>
-            
-            <div class="service-pricing-table">
-              <div class="price-row">
-                <span class="duration-tag">⏱️ 60 นาที</span>
-                <span class="price-tag">350 ฿</span>
-              </div>
-              <div class="price-row">
-                <span class="duration-tag">⏱️ 90 นาที</span>
-                <span class="price-tag">500 ฿</span>
-              </div>
+            <h3 class="service-title" data-i18n="service4_title">Aroma Massage</h3>
+            <p class="service-desc" data-i18n="service4_desc">Gentle gliding strokes with organic essential oils. Nourishes skin, reduces stress, and promotes deeper, more restful sleep.</p>
+            <div class="service-cta-group">
+              <a href="tel:0926096923" class="btn btn-outline service-btn-half" id="s4-call-btn" data-conversion-type="call">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span data-i18n="service_btn_call">📞 Call for Pricing</span>
+              </a>
+              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line service-btn-half" id="s4-line-btn" data-conversion-type="line">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+                <span data-i18n="service_btn_line">💬 Enquire on LINE</span>
+              </a>
             </div>
+          </div>
+        </div>
 
-            <a href="https://line.me/ti/p/~@sangayamassage" class="btn btn-outline service-btn" data-conversion-type="line">
-              จองคิวรายการนี้
-            </a>
+        <!-- Service 5: Bamboo Signature Massage (NEW) -->
+        <div class="service-card service-card--bamboo">
+          <div class="service-image-container">
+            <img src="/images/herbal_compress_massage.jpg" alt="Bamboo Signature Massage SAN GAYA" loading="lazy">
+            <span class="service-popular-badge service-popular-badge--gold" data-i18n="service5_badge">✨ Signature</span>
+          </div>
+          <div class="service-body">
+            <h3 class="service-title" data-i18n="service5_title">Bamboo Signature Massage</h3>
+            <p class="service-desc" data-i18n="service5_desc">Our exclusive treatment using warmed bamboo sticks to knead and roll deep into muscles. Exceptional pressure and relaxation unlike anything else.</p>
+            <div class="service-cta-group">
+              <a href="tel:0926096923" class="btn btn-outline service-btn-half" id="s5-call-btn" data-conversion-type="call">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span data-i18n="service_btn_call">📞 Call for Pricing</span>
+              </a>
+              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line service-btn-half" id="s5-line-btn" data-conversion-type="line">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+                <span data-i18n="service_btn_line">💬 Enquire on LINE</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -278,34 +275,34 @@
           <div>
             <div class="stars-wrapper">★★★★★</div>
             <div class="rating-info">
-              <h4>การันตีความประทับใจระดับ 5 ดาวบน Google Maps</h4>
-              <p>จากรีวิวผู้ใช้บริการจริงร้าน SAN GAYA Massage (San Sai, Chiang Mai)</p>
+              <h4 data-i18n="google_rating_title">Rated 5.0 Stars on Google Maps</h4>
+              <p data-i18n="google_rating_sub">From verified guests of SAN GAYA Massage (San Sai, Chiang Mai)</p>
             </div>
           </div>
         </div>
-        <a href="https://maps.app.goo.gl/HCD6xhHzLYZ5xRgH7" target="_blank" rel="noopener" class="google-badge-pill">
+        <a href="https://maps.app.goo.gl/HCD6xhHzLYZ5xRgH7" target="_blank" rel="noopener" class="google-badge-pill" id="google-maps-reviews-link">
           <span class="google-g-logo">
             <svg width="22" height="22" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
           </span>
-          อ่านรีวิวทั้งหมดบน Google Maps ↗
+          <span data-i18n="google_badge">See All Reviews on Google Maps ↗</span>
         </a>
       </div>
 
       <div class="section-header">
-        <span class="section-subtitle">รีวิวจากลูกค้าจริง</span>
-        <h2 class="section-title">ความประทับใจผู้ใช้บริการ SAN GAYA Massage</h2>
+        <span class="section-subtitle" data-i18n="reviews_subtitle">Real Guest Reviews</span>
+        <h2 class="section-title" data-i18n="reviews_title">What Our Clients Say About SAN GAYA</h2>
       </div>
 
       <div class="reviews-grid" id="google-reviews-container">
-        <!-- Google Review 1 -->
+        <!-- Review 1 -->
         <div class="google-review-card">
           <div>
             <div class="google-review-header">
               <div class="review-author">
                 <div class="author-avatar">P</div>
                 <div class="author-details">
-                  <h5>คุณภัทราภรณ์ K.</h5>
-                  <p>Local Guide • 18 รีวิว</p>
+                  <h5 data-i18n="review1_name">Patthraporn K.</h5>
+                  <p data-i18n="review1_role">Local Guide • 18 reviews</p>
                 </div>
               </div>
               <div class="google-icon-badge">
@@ -313,20 +310,20 @@
               </div>
             </div>
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">"นวดออฟฟิศซินโดรมดีมากกกค่ะ ปกติปวดสะบักจนนอนหลับยาก หมอนวดกดถูกจุดเป๊ะ เบามือแต่เข้าถึงเส้น ผ้าปูหอมสะอาด บรรยากาศเงียบสงบ ประทับใจมากค่ะ"</p>
+            <p class="review-text" data-i18n="review1_text">"The Office Syndrome massage was outstanding. My shoulder blades always hurt from bad sleep — the therapist hit every right spot. Gentle yet so deep. The sheets smelled so fresh. So peaceful. Highly recommended."</p>
           </div>
-          <div class="review-time">Google Review • 2 สัปดาห์ที่แล้ว</div>
+          <div class="review-time" data-i18n="review1_time">Google Review • 2 weeks ago</div>
         </div>
 
-        <!-- Google Review 2 -->
+        <!-- Review 2 -->
         <div class="google-review-card">
           <div>
             <div class="google-review-header">
               <div class="review-author">
                 <div class="author-avatar avatar-green">A</div>
                 <div class="author-details">
-                  <h5>คุณอนันต์ T.</h5>
-                  <p>Local Guide • 42 รีวิว</p>
+                  <h5 data-i18n="review2_name">Anant T.</h5>
+                  <p data-i18n="review2_role">Local Guide • 42 reviews</p>
                 </div>
               </div>
               <div class="google-icon-badge">
@@ -334,20 +331,20 @@
               </div>
             </div>
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">"ร้านสะอาดมากครับ ผ้าปูเปลี่ยนใหม่สดๆ กลิ่นอโรมาหอมผ่อนคลาย หมอนวดมารยาทดี มีที่จอดรถหน้าร้านจอดสะดวก นวดออยล์ผ่อนคลายสบายตัวสุดๆ"</p>
+            <p class="review-text" data-i18n="review2_text">"Incredibly clean place. The linen was fresh, the aroma was calming, and the therapist was so polite. Parking was easy right in front. The oil massage left me completely relaxed."</p>
           </div>
-          <div class="review-time">Google Review • 1 เดือนที่แล้ว</div>
+          <div class="review-time" data-i18n="review2_time">Google Review • 1 month ago</div>
         </div>
 
-        <!-- Google Review 3 -->
+        <!-- Review 3 -->
         <div class="google-review-card">
           <div>
             <div class="google-review-header">
               <div class="review-author">
                 <div class="author-avatar avatar-orange">W</div>
                 <div class="author-details">
-                  <h5>คุณวิศรุต M.</h5>
-                  <p>Verified Reviewer</p>
+                  <h5 data-i18n="review3_name">Wisarut M.</h5>
+                  <p data-i18n="review3_role">Verified Reviewer</p>
                 </div>
               </div>
               <div class="google-icon-badge">
@@ -355,9 +352,9 @@
               </div>
             </div>
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">"คุ้มค่าราคามากครับ มานวดไทย 90 นาที หายเมื่อยไปเยอะเลย หมอนวดน้ำหนักมือดีมาก สุภาพ ใส่ใจเรื่องความสะอาด แนะนำให้โทรจองคิวล่วงหน้านะครับ"</p>
+            <p class="review-text" data-i18n="review3_text">"Great value and worth every visit. Came in for the Thai Massage 90 mins and left feeling brand new. Therapist had perfect pressure. Very clean and professional. Book ahead by phone!"</p>
           </div>
-          <div class="review-time">Google Review • 1 เดือนที่แล้ว</div>
+          <div class="review-time" data-i18n="review3_time">Google Review • 1 month ago</div>
         </div>
       </div>
     </div>
@@ -367,8 +364,8 @@
   <section class="location-section section-padding" id="location">
     <div class="container">
       <div class="section-header">
-        <span class="section-subtitle">ที่ตั้งและการเดินทาง</span>
-        <h2 class="section-title">แวะมาผ่อนคลายที่ SAN GAYA Massage</h2>
+        <span class="section-subtitle" data-i18n="location_subtitle">Find Us</span>
+        <h2 class="section-title" data-i18n="location_title">Visit SAN GAYA Massage</h2>
       </div>
 
       <div class="location-wrapper">
@@ -379,9 +376,9 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
             </div>
             <div class="info-content">
-              <h4>เวลาเปิด - ปิดให้บริการ</h4>
-              <p><strong>เปิดให้บริการทุกวัน:</strong> 13.00 - 21.00 น.</p>
-              <p style="font-size:0.85rem; color: var(--text-muted); margin-top:2px;">*รับคิวสุดท้ายเวลา 20.00 น. (แนะนำจองคิวล่วงหน้า)</p>
+              <h4 data-i18n="location_hours_title">Opening Hours</h4>
+              <p><strong data-i18n="location_hours_detail">Open Daily: 1:00 PM – 9:00 PM</strong></p>
+              <p style="font-size:0.85rem; color: var(--text-muted); margin-top:2px;" data-i18n="location_hours_note">*Last appointment at 8:00 PM (advance booking recommended)</p>
             </div>
           </div>
 
@@ -390,9 +387,9 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
             </div>
             <div class="info-content">
-              <h4>สถานที่ตั้งร้าน</h4>
-              <p><strong>SAN GAYA Massage</strong></p>
-              <p>มีพื้นที่จอดรถกว้างขวาง ปลอดภัย บริเวณหน้าร้าน</p>
+              <h4 data-i18n="location_address_title">Our Location</h4>
+              <p><strong data-i18n="location_address_name">SAN GAYA Massage</strong></p>
+              <p data-i18n="location_address_note">Spacious, safe parking available right in front</p>
             </div>
           </div>
 
@@ -401,33 +398,33 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </div>
             <div class="info-content">
-              <h4>ติดต่อและติดตามโซเชียล</h4>
-              <p><strong>โทรศัพท์:</strong> <a href="tel:0926096923" style="color: var(--primary-green); font-weight:600;">092-609-6923</a></p>
-              <p><strong>LINE Official:</strong> <a href="https://line.me/ti/p/~@sangayamassage" target="_blank" style="color: var(--line-green); font-weight:600;">@sangayamassage</a></p>
-              <p><strong>Facebook Page:</strong> <a href="https://www.facebook.com/profile.php?id=61586157573201" target="_blank" rel="noopener" style="color: var(--warm-brown); font-weight:600;">San Gaya Massage นวด เพื่อสุขภาพ</a></p>
+              <h4 data-i18n="location_contact_title">Contact &amp; Social</h4>
+              <p><strong data-i18n="location_phone">Phone:</strong> <a href="tel:0926096923" id="location-call-link" style="color: var(--primary-green); font-weight:600;">092-609-6923</a></p>
+              <p><strong data-i18n="location_line">LINE Official:</strong> <a href="https://lin.ee/7FjLT1w" target="_blank" id="location-line-link" style="color: var(--line-green); font-weight:600;">@sangayamassage</a></p>
+              <p><strong data-i18n="location_facebook">Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61586157573201" target="_blank" rel="noopener" style="color: var(--warm-brown); font-weight:600;"><span data-i18n="location_facebook_name">San Gaya Massage</span></a></p>
             </div>
           </div>
 
           <div class="location-actions">
-            <a href="https://maps.app.goo.gl/HCD6xhHzLYZ5xRgH7" target="_blank" rel="noopener" class="location-btn location-btn-map">
+            <a href="https://maps.app.goo.gl/HCD6xhHzLYZ5xRgH7" target="_blank" rel="noopener" class="location-btn location-btn-map" id="location-map-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
-              <span>เปิดนำทาง Google Maps</span>
+              <span data-i18n="location_btn_map">Open in Google Maps</span>
             </a>
-            <a href="tel:0926096923" class="location-btn location-btn-call" data-conversion-type="call">
+            <a href="tel:0926096923" class="location-btn location-btn-call" id="location-call-btn" data-conversion-type="call">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span>โทรสอบถามเส้นทาง</span>
+              <span data-i18n="location_btn_call">Call for Directions</span>
             </a>
           </div>
         </div>
 
         <!-- Embedded Google Maps -->
         <div class="map-container">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.813!2d99.010655!3d18.8499163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3b23744f70c7%3A0x8ba506f3cbca51cf!2sSAN%20GAYA%20Massage!5e0!3m2!1sth!2sth!4v1700000000000!5m2!1sth!2sth" 
-            allowfullscreen="" 
-            loading="lazy" 
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.813!2d99.010655!3d18.8499163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3b23744f70c7%3A0x8ba506f3cbca51cf!2sSAN%20GAYA%20Massage!5e0!3m2!1sth!2sth!4v1700000000000!5m2!1sth!2sth"
+            allowfullscreen=""
+            loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="แผนที่พิกัด SAN GAYA Massage">
+            title="SAN GAYA Massage Location Map">
           </iframe>
         </div>
       </div>
@@ -437,17 +434,17 @@
   <!-- 6. FINAL CTA & FOOTER -->
   <section class="final-cta section-padding" id="contact">
     <div class="container cta-box">
-      <h2>พร้อมให้ SAN GAYA ดูแลความผ่อนคลายของคุณแล้วหรือยัง?</h2>
-      <p>สำรองคิวล่วงหน้าวันนี้ เพื่อรับการดูแลที่ดีที่สุดจากเทราพีสผู้เชี่ยวชาญ ไม่ต้องเสียเวลารอคิว</p>
-      
+      <h2 data-i18n="cta_title">Ready for SAN GAYA to Take Care of You?</h2>
+      <p data-i18n="cta_desc">Book your session today and let our expert therapists give you the care you deserve. No waiting — just relaxation.</p>
+
       <div class="cta-buttons">
-        <a href="tel:0926096923" class="btn btn-primary" data-conversion-type="call">
+        <a href="tel:0926096923" class="btn btn-primary" id="cta-call-btn" data-conversion-type="call">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          โทรจองคิวทันที: 092-609-6923
+          <span data-i18n="cta_btn_call">Call Now: 092-609-6923</span>
         </a>
-        <a href="https://line.me/ti/p/~@sangayamassage" target="_blank" rel="noopener" class="btn btn-line" data-conversion-type="line">
+        <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line" id="cta-line-btn" data-conversion-type="line">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
-          แอด LINE @sangayamassage
+          <span data-i18n="cta_btn_line">Add LINE @sangayamassage</span>
         </a>
       </div>
     </div>
@@ -459,17 +456,17 @@
       <div style="margin-bottom: 14px;">
         <img src="/images/logo.png" alt="SAN GAYA Logo" style="height: 52px; width: auto; margin: 0 auto; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4));">
       </div>
-      <p>© 2026 SAN GAYA Massage. All Rights Reserved. บริการนวดเพื่อสุขภาพเพื่อความผ่อนคลายสูงสุด</p>
+      <p data-i18n="footer_copy">© 2026 SAN GAYA Massage. All Rights Reserved. Premium health massage services for ultimate relaxation.</p>
     </div>
   </footer>
 
-  <!-- MOBILE STICKY BOTTOM BAR (CONVERSION MAGNET) -->
+  <!-- MOBILE STICKY BOTTOM BAR -->
   <div class="mobile-sticky-bar">
-    <a href="tel:0926096923" class="btn btn-primary" data-conversion-type="call">
-      📞 โทรจองคิว
+    <a href="tel:0926096923" class="btn btn-primary" id="sticky-call-btn" data-conversion-type="call">
+      <span data-i18n="sticky_call">📞 Call to Book</span>
     </a>
-    <a href="https://line.me/ti/p/~@sangayamassage" target="_blank" rel="noopener" class="btn btn-line" data-conversion-type="line">
-      💬 แอด LINE จองคิว
+    <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line" id="sticky-line-btn" data-conversion-type="line">
+      <span data-i18n="sticky_line">💬 Book on LINE</span>
     </a>
   </div>
 
