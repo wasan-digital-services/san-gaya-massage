@@ -1,9 +1,19 @@
 // ==========================================================================
-// SAN GAYA Massage - i18n Translations
+// SAN GAYA Massage - i18n Translations (TypeScript)
 // Languages: EN (default), TH, ZH
 // ==========================================================================
 
-export const translations = {
+type LangCode = 'en' | 'th' | 'zh';
+
+type Translations = {
+  [key: string]: string;
+};
+
+type TranslationMap = {
+  [L in LangCode]: Translations;
+};
+
+export const translations: TranslationMap = {
   en: {
     nav_services: 'Services',
     nav_highlights: 'Why Us',
@@ -251,16 +261,16 @@ export const translations = {
   }
 };
 
-export const SUPPORTED_LANGS = ['en', 'th', 'zh'];
-export const DEFAULT_LANG = 'en';
+export const SUPPORTED_LANGS: LangCode[] = ['en', 'th', 'zh'];
+export const DEFAULT_LANG: LangCode = 'en';
 export const STORAGE_KEY = 'sangaya_lang';
 
-export function getCurrentLang() {
+export function getCurrentLang(): LangCode {
   const stored = localStorage.getItem(STORAGE_KEY);
-  return SUPPORTED_LANGS.includes(stored) ? stored : DEFAULT_LANG;
+  return (SUPPORTED_LANGS as string[]).includes(stored ?? '') ? (stored as LangCode) : DEFAULT_LANG;
 }
 
-export function setLang(lang) {
+export function setLang(lang: LangCode): void {
   if (!SUPPORTED_LANGS.includes(lang)) return;
   localStorage.setItem(STORAGE_KEY, lang);
   applyTranslations(lang);
@@ -268,29 +278,28 @@ export function setLang(lang) {
   updateHtmlLang(lang);
 }
 
-export function applyTranslations(lang) {
-  const t = translations[lang] || translations[DEFAULT_LANG];
-  document.querySelectorAll('[data-i18n]').forEach(el => {
+export function applyTranslations(lang: LangCode): void {
+  const t = translations[lang] ?? translations[DEFAULT_LANG];
+  document.querySelectorAll<HTMLElement>('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (t[key] !== undefined) {
+    if (key && t[key] !== undefined) {
       el.textContent = t[key];
     }
   });
 }
 
-export function updateLangSwitcherUI(lang) {
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+export function updateLangSwitcherUI(lang: LangCode): void {
+  document.querySelectorAll<HTMLButtonElement>('.lang-btn').forEach(btn => {
     btn.classList.toggle('lang-btn--active', btn.getAttribute('data-lang') === lang);
   });
 }
 
-export function updateHtmlLang(lang) {
-  const htmlEl = document.documentElement;
-  const langMap = { en: 'en', th: 'th', zh: 'zh-CN' };
-  htmlEl.setAttribute('lang', langMap[lang] || 'en');
+export function updateHtmlLang(lang: LangCode): void {
+  const langMap: Record<LangCode, string> = { en: 'en', th: 'th', zh: 'zh-CN' };
+  document.documentElement.setAttribute('lang', langMap[lang]);
 }
 
-export function initI18n() {
+export function initI18n(): void {
   const lang = getCurrentLang();
   applyTranslations(lang);
   updateLangSwitcherUI(lang);
