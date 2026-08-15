@@ -48,10 +48,10 @@ window.gtag_report_conversion = function(url, type) {
 document.addEventListener('DOMContentLoaded', () => {
   console.log('SAN GAYA Massage Landing Page Loaded');
 
-  // --- 1. Initialize i18n (reads localStorage, applies translations) ---
+  // --- 1. Initialize i18n ---
   initI18n();
 
-  // --- 2. Language Switcher Button Listeners ---
+  // --- 2. Language Switcher ---
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const lang = btn.getAttribute('data-lang');
@@ -69,44 +69,55 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 150);
   }
 
-  // --- 4. Google Ads Conversion Tracking ---
+  // --- 4. Navbar scroll class ---
+  const navbar = document.querySelector('.navbar') as HTMLElement | null;
+  if (navbar) {
+    const handleNavScroll = () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    };
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
+    handleNavScroll();
+  }
 
-  // Track Phone Calls
-  const telLinks = document.querySelectorAll('a[href^="tel:"]');
-  telLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      console.log('Phone Call Initiated');
-      reportConversion('call');
-    });
+  // --- 5. Scroll-reveal animations ---
+  const revealTargets = document.querySelectorAll<HTMLElement>(
+    '.highlight-card, .service-card, .google-review-card, .location-info-card, .map-container, .google-rating-banner'
+  );
+
+  revealTargets.forEach((el, i) => {
+    el.classList.add('reveal');
+    el.style.transitionDelay = `${(i % 4) * 0.1}s`;
   });
 
-  // Track LINE Add Friends / Booking (lin.ee short links + line.me)
-  const lineLinks = document.querySelectorAll('a[href*="lin.ee"], a[href*="line.me"]');
-  lineLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      console.log('LINE Contact Initiated');
-      reportConversion('line');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        (entry.target as HTMLElement).classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
     });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealTargets.forEach(el => revealObserver.observe(el));
+
+  // --- 6. Google Ads Conversion Tracking ---
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', () => reportConversion('call'));
   });
 
-  // Track Google Maps Navigation
-  const mapLinks = document.querySelectorAll('a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]');
-  mapLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      console.log('Google Maps Navigation Initiated');
-      reportConversion('map');
-    });
+  document.querySelectorAll('a[href*="lin.ee"], a[href*="line.me"]').forEach(link => {
+    link.addEventListener('click', () => reportConversion('line'));
   });
 
-  // Track Facebook Page Visits
-  const fbLinks = document.querySelectorAll('a[href*="facebook.com"]');
-  fbLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      console.log('Facebook Page Initiated');
-      reportConversion('facebook');
-    });
+  document.querySelectorAll('a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]').forEach(link => {
+    link.addEventListener('click', () => reportConversion('map'));
+  });
+
+  document.querySelectorAll('a[href*="facebook.com"]').forEach(link => {
+    link.addEventListener('click', () => reportConversion('facebook'));
   });
 });
+
 
 // Dynamic Google Places API Fetcher Helper (Option to dynamic load Google Maps Reviews)
 window.fetchGoogleReviews = function(placeId, googleApiKey) {
