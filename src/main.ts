@@ -4,16 +4,36 @@ import './style.css';
 // Import i18n
 import { initI18n, setLang } from './i18n.js';
 
+// Google Ads Conversion Labels (one per conversion action in Google Ads)
+const AW_ID = 'AW-18381037285';
+const CONVERSION_LABELS = {
+  call: 'XHy6COXz_eAcEOW94bxE',
+  line: 'e1NCCK2ql-IcEOW94bxE', // add_line_website
+  map: 'XHy6COXz_eAcEOW94bxE',
+  facebook: 'XHy6COXz_eAcEOW94bxE'
+};
+
+function reportConversion(type) {
+  const label = CONVERSION_LABELS[type];
+  if (!label || typeof window.gtag !== 'function') return;
+  window.gtag('event', 'conversion', {
+    'send_to': `${AW_ID}/${label}`,
+    'value': 1.0,
+    'currency': 'THB'
+  });
+}
+
 // Global Google Ads Conversion Helper Function
-window.gtag_report_conversion = function(url) {
+window.gtag_report_conversion = function(url, type) {
   var callback = function () {
     if (typeof(url) !== 'undefined' && url) {
       window.location = url;
     }
   };
+  const label = CONVERSION_LABELS[type] || CONVERSION_LABELS.call;
   if (typeof window.gtag === 'function') {
     window.gtag('event', 'conversion', {
-      'send_to': 'AW-18381037285/XHy6COXz_eAcEOW94bxE',
+      'send_to': `${AW_ID}/${label}`,
       'value': 1.0,
       'currency': 'THB',
       'event_callback': callback
@@ -56,28 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
   telLinks.forEach(link => {
     link.addEventListener('click', () => {
       console.log('Phone Call Initiated');
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'conversion', {
-          'send_to': 'AW-18381037285/XHy6COXz_eAcEOW94bxE',
-          'value': 1.0,
-          'currency': 'THB'
-        });
-      }
+      reportConversion('call');
     });
   });
 
-  // Track LINE Add Friends / Booking
-  const lineLinks = document.querySelectorAll('a[href*="line.me"]');
+  // Track LINE Add Friends / Booking (lin.ee short links + line.me)
+  const lineLinks = document.querySelectorAll('a[href*="lin.ee"], a[href*="line.me"]');
   lineLinks.forEach(link => {
     link.addEventListener('click', () => {
       console.log('LINE Contact Initiated');
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'conversion', {
-          'send_to': 'AW-18381037285/XHy6COXz_eAcEOW94bxE',
-          'value': 1.0,
-          'currency': 'THB'
-        });
-      }
+      reportConversion('line');
     });
   });
 
@@ -86,13 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   mapLinks.forEach(link => {
     link.addEventListener('click', () => {
       console.log('Google Maps Navigation Initiated');
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'conversion', {
-          'send_to': 'AW-18381037285/XHy6COXz_eAcEOW94bxE',
-          'value': 1.0,
-          'currency': 'THB'
-        });
-      }
+      reportConversion('map');
     });
   });
 
@@ -101,13 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fbLinks.forEach(link => {
     link.addEventListener('click', () => {
       console.log('Facebook Page Initiated');
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'conversion', {
-          'send_to': 'AW-18381037285/XHy6COXz_eAcEOW94bxE',
-          'value': 1.0,
-          'currency': 'THB'
-        });
-      }
+      reportConversion('facebook');
     });
   });
 });
