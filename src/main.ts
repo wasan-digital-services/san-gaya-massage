@@ -7,10 +7,10 @@ import { initI18n, setLang } from './i18n.js';
 // Google Ads Conversion Labels (one per conversion action in Google Ads)
 const AW_ID = 'AW-18381037285';
 const CONVERSION_LABELS = {
-  call: 'XHy6COXz_eAcEOW94bxE',
+  call: 'XHy6COXz_eAcEOW94bxE', // call_website
   line: 'e1NCCK2ql-IcEOW94bxE', // add_line_website
-  map: 'XHy6COXz_eAcEOW94bxE',
-  facebook: 'XHy6COXz_eAcEOW94bxE'
+  map: 'aBGDCP7emOIcEOW94bxE', // web_directions
+  facebook: 'bpi7CKarmeIcEOW94bxE' // web_facebook_click
 };
 
 function reportConversion(type) {
