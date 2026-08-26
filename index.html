@@ -68,6 +68,12 @@
         <span class="hero-title-main" data-i18n="hero_title_main">SAN GAYA Massage</span>
         <span class="hero-title-sub" data-i18n="hero_title_sub">Revive Your Body. Melt the Stress Away.</span>
       </h1>
+
+      <div class="hero-rating-badge">
+        <span class="hero-rating-stars">★★★★★</span>
+        <span data-i18n="hero_rating_text">Rated 5.0 on Google Maps (San Sai, Chiang Mai)</span>
+      </div>
+
       <div class="hero-divider"></div>
       <p class="hero-description" data-i18n="hero_desc">
         Professional health massage services — Traditional Thai, Office Syndrome, Aroma & more — by certified therapists with DHSS standard. A clean, serene, and private sanctuary.
@@ -143,6 +149,18 @@
           <p data-i18n="highlight4_desc">No stress finding parking. We have spacious, safe parking right in front — just follow the pin and you're here.</p>
         </div>
       </div>
+
+      <!-- Real Store Atmosphere Photo Banner (Clean & Non-cluttered) -->
+      <div class="atmosphere-banner-grid">
+        <div class="atmosphere-img-card">
+          <img src="/images/interior_sneak_peek.jpg" alt="SAN GAYA Reception & Ambiance" loading="lazy">
+          <span class="atmosphere-img-badge" data-i18n="atmosphere_badge1">🌿 Clean & Private Ambiance</span>
+        </div>
+        <div class="atmosphere-img-card">
+          <img src="/images/massage_bed_atmosphere.jpg" alt="SAN GAYA Sanitized Massage Bed" loading="lazy">
+          <span class="atmosphere-img-badge" data-i18n="atmosphere_badge2">✨ Hotel-Standard Sanitized Linen</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -165,12 +183,13 @@
             <h3 class="service-title" data-i18n="service1_title">Thai Massage</h3>
             <p class="service-desc" data-i18n="service1_desc">Acupressure, stretching, and deep muscle release across the whole body. Reduces tension and stiffness, leaving you refreshed and energized.</p>
             <div class="service-cta-group">
-              <a href="tel:0926096923" class="btn btn-outline service-btn-half" id="s1-call-btn" data-conversion-type="call">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:0926096923" class="btn btn-service-call" id="s1-call-btn" data-conversion-type="call">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <span data-i18n="service_btn_call">092-609-6923</span>
               </a>
-              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line service-btn-line-icon" id="s1-line-btn" data-conversion-type="line" aria-label="Enquire on LINE" title="Enquire on LINE">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-service-line" id="s1-line-btn" data-conversion-type="line">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+                <span data-i18n="service_btn_line">LINE</span>
               </a>
             </div>
           </div>
@@ -186,12 +205,13 @@
             <h3 class="service-title" data-i18n="service2_title">Office Syndrome Massage</h3>
             <p class="service-desc" data-i18n="service2_desc">Targeted deep-tissue work on neck, shoulders, upper back, and shoulder blades — ideal for those who sit at a computer for long hours.</p>
             <div class="service-cta-group">
-              <a href="tel:0926096923" class="btn btn-primary service-btn-half" id="s2-call-btn" data-conversion-type="call">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:0926096923" class="btn btn-service-call btn-service-call--featured" id="s2-call-btn" data-conversion-type="call">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <span data-i18n="service_btn_call">092-609-6923</span>
               </a>
-              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line service-btn-line-icon" id="s2-line-btn" data-conversion-type="line" aria-label="Enquire on LINE" title="Enquire on LINE">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-service-line" id="s2-line-btn" data-conversion-type="line">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+                <span data-i18n="service_btn_line">LINE</span>
               </a>
             </div>
           </div>
@@ -206,12 +226,13 @@
             <h3 class="service-title" data-i18n="service3_title">Foot Massage</h3>
             <p class="service-desc" data-i18n="service3_desc">Warm herbal foot soak followed by leg muscle relief and reflexology pressure points. Stimulates blood circulation and melts away fatigue.</p>
             <div class="service-cta-group">
-              <a href="tel:0926096923" class="btn btn-outline service-btn-half" id="s3-call-btn" data-conversion-type="call">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:0926096923" class="btn btn-service-call" id="s3-call-btn" data-conversion-type="call">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <span data-i18n="service_btn_call">092-609-6923</span>
               </a>
-              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line service-btn-line-icon" id="s3-line-btn" data-conversion-type="line" aria-label="Enquire on LINE" title="Enquire on LINE">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-service-line" id="s3-line-btn" data-conversion-type="line">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+                <span data-i18n="service_btn_line">LINE</span>
               </a>
             </div>
           </div>
@@ -226,12 +247,13 @@
             <h3 class="service-title" data-i18n="service4_title">Aroma Massage</h3>
             <p class="service-desc" data-i18n="service4_desc">Gentle gliding strokes with organic essential oils. Nourishes skin, reduces stress, and promotes deeper, more restful sleep.</p>
             <div class="service-cta-group">
-              <a href="tel:0926096923" class="btn btn-outline service-btn-half" id="s4-call-btn" data-conversion-type="call">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:0926096923" class="btn btn-service-call" id="s4-call-btn" data-conversion-type="call">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <span data-i18n="service_btn_call">092-609-6923</span>
               </a>
-              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line service-btn-line-icon" id="s4-line-btn" data-conversion-type="line" aria-label="Enquire on LINE" title="Enquire on LINE">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-service-line" id="s4-line-btn" data-conversion-type="line">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+                <span data-i18n="service_btn_line">LINE</span>
               </a>
             </div>
           </div>
@@ -247,12 +269,13 @@
             <h3 class="service-title" data-i18n="service5_title">Bamboo Signature Massage</h3>
             <p class="service-desc" data-i18n="service5_desc">Our exclusive treatment using warmed bamboo sticks to knead and roll deep into muscles. Exceptional pressure and relaxation unlike anything else.</p>
             <div class="service-cta-group">
-              <a href="tel:0926096923" class="btn btn-outline service-btn-half" id="s5-call-btn" data-conversion-type="call">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:0926096923" class="btn btn-service-call" id="s5-call-btn" data-conversion-type="call">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <span data-i18n="service_btn_call">092-609-6923</span>
               </a>
-              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-line service-btn-line-icon" id="s5-line-btn" data-conversion-type="line" aria-label="Enquire on LINE" title="Enquire on LINE">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+              <a href="https://lin.ee/7FjLT1w" target="_blank" rel="noopener" class="btn btn-service-line" id="s5-line-btn" data-conversion-type="line">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.34 10.15c0-4.14-4.19-7.5-9.34-7.5S0 6.01 0 10.15c0 3.71 3.32 6.82 7.81 7.37.3.07.72.2.82.46.09.24.06.62.03.86l-.13.79c-.04.25-.19.98.86.53.58-.25 3.13-1.84 4.27-3.15 2.55-1.12 5.68-3.52 5.68-6.86z"/></svg>
+                <span data-i18n="service_btn_line">LINE</span>
               </a>
             </div>
           </div>

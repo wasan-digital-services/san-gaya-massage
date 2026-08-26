@@ -22,6 +22,7 @@ export const translations: TranslationMap = {
     hero_badge: '✨ Premium Thai Massage in San Sai (Near You at M Sport Plus)',
     hero_title_main: 'SAN GAYA Massage',
     hero_title_sub: 'Revive Your Body. Melt the Stress Away.',
+    hero_rating_text: '5.0 Rated on Google Maps (San Sai, Chiang Mai)',
     hero_desc: '100% Authentic Wellness Massage — Office Syndrome (Neck & Shoulder Relief), Traditional Thai, Aroma & Foot Massage by certified DHSS therapists. A clean, serene, and private sanctuary with free parking.',
     hero_btn_call: 'Call to Book: 092-609-6923',
     hero_btn_line: 'Book via LINE',
@@ -38,6 +39,8 @@ export const translations: TranslationMap = {
     highlight3_desc: "Our space is thoughtfully designed — open, clean, and free from noise. Subtle natural aromas help your body and mind fully unwind.",
     highlight4_title: 'Free Parking Available',
     highlight4_desc: "No stress finding parking. We have spacious, safe parking right in front — just follow the pin and you're here.",
+    atmosphere_badge1: '🌿 Clean & Private Ambiance',
+    atmosphere_badge2: '✨ Hotel-Standard Sanitized Linen',
     services_subtitle: 'Our Signature Services',
     services_title: 'SAN GAYA Massage Menu',
     services_desc: 'Curated massage programs to target your needs — Thai, Office Syndrome (Neck & Shoulder), Aroma, Foot, and our exclusive Bamboo Signature.',
@@ -54,7 +57,7 @@ export const translations: TranslationMap = {
     service5_badge: '✨ Signature',
     service5_desc: 'Our exclusive treatment using warmed bamboo sticks to knead and roll deep into muscles. Exceptional pressure and relaxation unlike anything else.',
     service_btn_call: '092-609-6923',
-    service_btn_line: '',
+    service_btn_line: 'LINE',
     reviews_subtitle: 'Real Guest Reviews',
     reviews_title: 'What Our Clients Say About SAN GAYA',
     google_rating_title: 'Rated 5.0 Stars on Google Maps',
@@ -104,6 +107,7 @@ export const translations: TranslationMap = {
     hero_badge: '✨ ร้านนวดเพื่อสุขภาพ สันทราย เชียงใหม่ (ใกล้คุณ พิกัด M Sport Plus)',
     hero_title_main: 'SAN GAYA Massage',
     hero_title_sub: 'ฟื้นฟูร่างกาย คลายความเมื่อยล้า (ใกล้คุณ สันทราย-รวมโชค)',
+    hero_rating_text: '5.0 การันตีรีวิวจากลูกค้าจริง (สันทราย เชียงใหม่)',
     hero_desc: 'บริการนวดเพื่อสุขภาพแท้ 100% — นวดคอบ่าไหล่แก้ออฟฟิศซินโดรม นวดไทยโบราณ นวดอโรมา นวดเท้า — โดยเทราพีสมีใบรับรองมาตรฐาน สบส. (ไม่รับนอกสถานที่) บรรยากาศเงียบสงบ สะอาด เป็นส่วนตัว มีที่จอดรถสะดวกสบาย',
     hero_btn_call: 'โทรจองคิว: 092-609-6923',
     hero_btn_line: 'แอด LINE จองคิวด่วน',
@@ -120,6 +124,8 @@ export const translations: TranslationMap = {
     highlight3_desc: 'ออกแบบพื้นที่ให้โปร่ง สะอาด ปราศจากเสียงรบกวน พร้อมกลิ่นหอมอโรมาธรรมชาติเบาๆ ช่วยให้ร่างกายและสมองผ่อนคลายเต็มที่',
     highlight4_title: 'มีที่จอดรถสะดวกสบาย',
     highlight4_desc: 'หมดกังวลเรื่องวนหาที่จอดรถ ร้านมีพื้นที่จอดรถกว้างขวาง ปลอดภัย บริเวณหน้าร้าน ปักหมุดเดินทางมาได้ง่ายดาย',
+    atmosphere_badge1: '🌿 บรรยากาศสะอาด เป็นส่วนตัว',
+    atmosphere_badge2: '✨ ผ้าปูอบฆ่าเชื้อมาตรฐานโรงแรม',
     services_subtitle: 'บริการของเรา',
     services_title: 'เมนูนวดเพื่อสุขภาพ SAN GAYA',
     services_desc: 'คัดสรรโปรแกรมนวดที่ตอบโจทย์ความเมื่อยล้า ครบครันทั้งนวดไทย ออฟฟิศซินโดรมแก้อาการ คอ บ่า ไหล่ อโรมา นวดเท้า และแบมบู ซิกเนเจอร์',
@@ -136,7 +142,7 @@ export const translations: TranslationMap = {
     service5_badge: '✨ ซิกเนเจอร์',
     service5_desc: 'ทรีตเมนต์พิเศษเฉพาะร้านด้วยไม้ไผ่อุ่นๆ นวดกดลึกเข้าไปในกล้ามเนื้อ ให้ความรู้สึกผ่อนคลายสุดพิเศษที่ไม่เหมือนใคร',
     service_btn_call: '092-609-6923',
-    service_btn_line: '',
+    service_btn_line: 'จองผ่าน LINE',
     reviews_subtitle: 'รีวิวจากลูกค้าจริง',
     reviews_title: 'ความประทับใจผู้ใช้บริการ SAN GAYA Massage',
     google_rating_title: 'การันตีความประทับใจระดับ 5 ดาวบน Google Maps',
@@ -267,7 +273,19 @@ export const STORAGE_KEY = 'sangaya_lang';
 
 export function getCurrentLang(): LangCode {
   const stored = localStorage.getItem(STORAGE_KEY);
-  return (SUPPORTED_LANGS as string[]).includes(stored ?? '') ? (stored as LangCode) : DEFAULT_LANG;
+  if ((SUPPORTED_LANGS as string[]).includes(stored ?? '')) {
+    return stored as LangCode;
+  }
+
+  // Auto-detect device / browser language
+  const browserLangs = navigator.languages && navigator.languages.length ? Array.from(navigator.languages) : [navigator.language || ''];
+  for (const lang of browserLangs) {
+    const l = (lang || '').toLowerCase();
+    if (l.startsWith('th')) return 'th';
+    if (l.startsWith('zh')) return 'zh';
+  }
+
+  return DEFAULT_LANG;
 }
 
 export function setLang(lang: LangCode): void {

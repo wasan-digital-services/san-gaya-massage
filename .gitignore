@@ -20,3 +20,5 @@ firebase-debug.*.log
 .idea/
 .DS_Store
 Thumbs.db
+
+google_ads_images/
