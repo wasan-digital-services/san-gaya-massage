@@ -206,6 +206,20 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 6px 20px rgba(6, 199, 85, 0.3);
 }
 
+.btn-facebook {
+  background-color: #1877F2;
+  color: #fff;
+  border-color: #1877F2;
+  box-shadow: 0 2px 12px rgba(24, 119, 242, 0.25);
+}
+.btn-facebook:hover {
+  background-color: #166fe5;
+  border-color: #166fe5;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(24, 119, 242, 0.35);
+}
+
 .btn-outline {
   background-color: transparent;
   border-color: var(--primary-green);
@@ -731,88 +745,121 @@ img { max-width: 100%; height: auto; display: block; }
   flex-grow: 1;
 }
 
+.service-meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.service-tag {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary-green);
+  background: var(--primary-green-light);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+}
+
+.service-duration {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--warm-brown);
+  background: var(--warm-brown-light);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+}
+
 .service-cta-group {
   display: flex;
   gap: 8px;
   margin-top: auto;
 }
 
-.service-btn-half {
+.btn-service-book {
   flex: 1;
-  padding: 10px 12px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  gap: 6px;
-  border-radius: var(--radius-xs);
-  white-space: nowrap;
-  min-width: 0;
-}
-
-.service-btn-half svg { flex-shrink: 0; }
-
-.service-btn-line-icon {
-  flex: 0 0 42px;
-  width: 42px;
-  padding: 10px;
-  border-radius: var(--radius-xs);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Luxurious Service Card CTA Buttons */
-.btn-service-call {
-  flex: 1.2;
-  background: var(--primary-green);
-  color: #FFFFFF !important;
-  border: 1px solid rgba(212, 166, 107, 0.4);
-  padding: 10px 14px;
-  font-size: 0.84rem;
-  font-weight: 600;
-  border-radius: var(--radius-xs);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  box-shadow: 0 2px 8px rgba(44, 53, 27, 0.15);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  white-space: nowrap;
-}
-
-.btn-service-call:hover {
-  background: var(--primary-green-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(44, 53, 27, 0.25);
-  border-color: var(--gold);
-}
-
-.btn-service-call--featured {
-  background: linear-gradient(135deg, var(--primary-green) 0%, #36421d 100%);
-  border: 1px solid var(--gold);
-}
-
-.btn-service-line {
-  flex: 1;
-  background: #06C755;
+  background: var(--line-green);
   color: #FFFFFF !important;
   border: none;
-  padding: 10px 14px;
-  font-size: 0.84rem;
+  padding: 11px 16px;
+  font-size: 0.88rem;
   font-weight: 600;
-  border-radius: var(--radius-xs);
+  border-radius: var(--radius-sm);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  box-shadow: 0 2px 8px rgba(6, 199, 85, 0.2);
+  gap: 8px;
+  box-shadow: 0 3px 10px rgba(6, 199, 85, 0.22);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  white-space: nowrap;
+  text-decoration: none;
 }
 
-.btn-service-line:hover {
-  background: #05b34c;
+.btn-service-book:hover {
+  background: var(--line-green-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(6, 199, 85, 0.35);
+  box-shadow: 0 6px 18px rgba(6, 199, 85, 0.35);
+}
+
+.btn-service-call-icon {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  background: var(--primary-green-light);
+  color: var(--primary-green) !important;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.22s ease;
+}
+
+.btn-service-call-icon:hover {
+  background: var(--primary-green);
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+/* Promo Announcement Top Banner */
+.promo-top-bar {
+  background: linear-gradient(90deg, #2D3A15 0%, #465520 50%, #2D3A15 100%);
+  color: #F8EDD3;
+  text-align: center;
+  padding: 9px 16px;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(201, 163, 90, 0.3);
+  position: relative;
+  z-index: 100;
+}
+
+.promo-top-bar a {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: opacity 0.2s ease;
+}
+
+.promo-top-bar a:hover {
+  color: #FCE8B2;
+}
+
+.location-address-full {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  margin: 4px 0 6px;
+  line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -1129,6 +1176,48 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.82rem;
   border-top: 1px solid rgba(255,255,255,0.05);
   line-height: 1.6;
+}
+
+.footer-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-social-btn.facebook {
+  color: #58a6ff;
+}
+.footer-social-btn.facebook:hover {
+  background: #1877F2;
+  color: #fff;
+  border-color: #1877F2;
+  transform: translateY(-2px);
+}
+
+.footer-social-btn.line {
+  color: var(--line-green);
+}
+.footer-social-btn.line:hover {
+  background: var(--line-green);
+  color: #fff;
+  border-color: var(--line-green);
+  transform: translateY(-2px);
 }
 
 /* ==========================================================================
