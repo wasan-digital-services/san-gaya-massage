@@ -1,34 +1,47 @@
-# San Gaya Massage (ซานกายา นวดเพื่อสุขภาพ)
+# SAN GAYA Massage Project
 
-## Website
-- **Live URL**: [https://san-gaya-massage.web.app/](https://san-gaya-massage.web.app/)
-- **Location**: สนามกอล์ฟ M Sport Plus (บริเวณหลังเลน 31-32) สันทราย เชียงใหม่ (ใกล้แยกลิขิตชีวัน - รวมโชค)
-- **Google Ads Account**: `539-798-6094` (SAN GAYA Massage ซานกายา นวดเพื่อสุขภาพ)
-- **Google Ads Conversion ID**: `AW-18381037285`
+โปรเจกต์รวมศูนย์สำหรับการพัฒนาเว็บไซต์และการตลาดของ **SAN GAYA Massage (ซานกายา นวดเพื่อสุขภาพ)**
 
 ---
 
-## 🔒 Pricing Policy (Strictly Confidential / นโยบายราคาเป็นความลับ)
-> **สำคัญมาก (CONFIDENTIAL):**
-> 1. **ห้ามแสดงตัวเลขราคาและโปรโมชั่นตัวเลขบนหน้าเว็บไซต์โดยเด็ดขาด** (No public price figures or rate cards on the sales page).
-> 2. ราคาค่าบริการ คอร์สพิเศษ และโปรโมชั่นส่วนลดต่างๆ ถือเป็น **ข้อมูลความลับภายใน (Internal Confidential)** เพื่อรักษาภาพลักษณ์พรีเมียม และให้เกิดการทักเข้ามาสนทนาโดยตรง
-> 3. **Call-to-Action (CTA)** บนหน้าเว็บจะเน้นให้ลูกค้าติดต่อผ่าน **LINE Official (`@sangayamassage`)** หรือ **โทรศัพท์ (`092-609-6923`)** เพื่อสอบถามราคาคอร์สและจองคิวล่วงหน้าเท่านั้น
+## 📁 โครงสร้างโปรเจกต์ (Monorepo Structure)
+
+```text
+san-gaya-massage-web/
+├── 🌐 web/                           # ซอร์สโค้ดเว็บไซต์ Sale Page
+│   ├── src/                          # TypeScript, Styles, i18n
+│   ├── public/                       # รูปภาพและ Assets ของเว็บ
+│   ├── index.html                    # หน้าแรกเว็บไซต์
+│   ├── firebase.json                 # การตั้งค่า Firebase Hosting
+│   └── package.json                  # Scripts & Dependencies
+│
+└── 📁 docs/                          # เอกสารธุรกิจ กลยุทธ์การตลาด และรายงาน
+    ├── marketing/                    # แผนกลยุทธ์การตลาดและ Ads
+    │   ├── google_ads_recommendations.md
+    │   ├── google_maps_recommendations.md
+    │   └── san_gaya_business_profile.md
+    ├── reports/                      # รายงานและสื่อสรุปผล
+    │   ├── san_gaya_summary.html
+    │   └── san_gaya_summary_th.png
+    └── assets/                       # โลโก้และไฟล์มีเดียสำหรับงานเอกสาร
+        └── san_gaya_health_massage_logo.jpeg
+```
 
 ---
 
-## 🎯 Target Audience & Ad Consistency (ความสอดคล้องกับโฆษณา)
-- **นักกอล์ฟ / ผู้มาซ้อมกอล์ฟ (Golfers)**: ผ่อนคลายกล้ามเนื้อหลังซ้อมไดร์ฟกอล์ฟที่ M Sport Plus (จุดขายหลักที่ตั้งร้าน)
-- **ชาวออฟฟิศ (Office Workers)**: นวดแก้อาการออฟฟิศซินโดรม คอ บ่า ไหล่ สะบักตึง
-- **คนท้องถิ่นและนักท่องเที่ยว (Locals & Travelers)**: สันทราย, รวมโชค, แยกลิขิตชีวัน, เชียงใหม่
+## 🚀 การรันและ Build เว็บไซต์
 
----
+เข้าไปที่โฟลเดอร์ `web/`:
 
-## Development
-This project is built with Vite, TypeScript, and Vanilla CSS, deployed to Firebase Hosting.
+```bash
+cd web
 
-### Scripts
-- `npm run dev`: Start development server
-- `npm run build`: Build for production
-- `npm run preview`: Preview production build
-- `npm run deploy`: Build and deploy to Firebase Hosting
+# รัน Development Server
+npm run dev
 
+# Build สำหรับ Production
+npm run build
+
+# Deploy ขึ้น Firebase Hosting
+npm run deploy
+```
