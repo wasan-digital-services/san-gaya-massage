@@ -102,7 +102,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 6. Google Ads Conversion Tracking ---
   document.querySelectorAll('a[href^="tel:"]').forEach(link => {
-    link.addEventListener('click', () => reportConversion('call'));
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const url = link.getAttribute('href');
+      if (typeof (window as any).gtag_report_conversion === 'function') {
+        (window as any).gtag_report_conversion(url, 'call');
+      } else if (url) {
+        window.location.href = url;
+      }
+    });
   });
 
   document.querySelectorAll('a[href*="lin.ee"], a[href*="line.me"]').forEach(link => {
